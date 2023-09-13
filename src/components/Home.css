@@ -1,0 +1,82 @@
+.home-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    
+    background-color: var(--Home-background-color);
+    min-height: 100vh;
+    padding-bottom: 15px;
+}
+.all-user-content {
+    margin: 5px;
+}
+
+.POSTLIST {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+
+.user-content {
+    background-color: var(--Main-background-color);
+    position: relative;
+    margin: 5px 5px;
+    min-height: 150px;
+    overflow: auto;
+    
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 2px;
+    left: 20px;
+    right: 0;
+}
+
+.user-pp {
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: var(--User-pp-background-color);
+}
+
+.user-reponse-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    right: 10px;
+    border: 1px solid black;
+    padding: 5px;
+    font-weight: 500;
+    margin-top: 70px;
+}
+
+.user-opt {
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    z-index: 5;
+}
+
+/* .post-content {
+    margin-top: 20px;
+    margin-bottom: 15px;
+} */
+
+.refresh-btn {
+    text-align: center;
+}
+
+.like-btn {
+    background-color: white;
+}

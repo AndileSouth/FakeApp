@@ -1,0 +1,22 @@
+.navbar-content {
+    margin:10px 0;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.brand {
+    text-align: center;
+}
+
+.navbar-content nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar-content Link,.navbar-content a {
+    text-decoration: none;
+    color: black;
+}
