@@ -135,25 +135,48 @@ const POSTSLIST = () => {
         
     ]
  
+    function showUserOpts(postId) {
+        const btn = document.querySelector(`.user-opt-${postId}`);
+        const getStyle = window.getComputedStyle(btn);
+        const display = getStyle.getPropertyValue('display');
+
+        display === 'none' ? btn.style.display = 'block' : btn.style.display = 'none';
+    }
+
+    function disableOpts() {
+        const btn = document.querySelector(`.user-opt`);
+        const getStyle = window.getComputedStyle(btn);
+        const display = getStyle.getPropertyValue('display');
+
+       if ( display === 'block'){
+         btn.style.display = 'none';
+       }
+    }
 
     return (
         <div className="POSTSLIST">
             {posts.map((post) => (
                 <div className="user-content post-preview" key={post.id}>
-                    <div className="user-opt cursor">...</div>
-                    <div className="user">
+                    <div className="user-opt-btn cursor" onClick={() => showUserOpts(post.id)}>...</div>
+                    <ul className={`user-opt user-opt-${post.id}`}>
+                        <li className='cursor'>Remove Post</li>
+                        <li className='cursor'>Report</li>
+                        
+                    </ul>
+
+                    <div className="user" onClick={disableOpts}>
                         <div className="user-pp cursor">{post.userPP}</div>
                         <div className="user-name cursor">{post.userName}</div>
                     </div>
                     
-                    <div className="post-content">
+                    <div className="post-content" onClick={disableOpts}>
                         <div className="img-container">
                           {post.post}  
                         </div>
                         
                     </div>
                     
-                    <div className="user-reponse-btn">
+                    <div className="user-reponse-btn" onClick={disableOpts}>
                         <div className="like-btn cursor" style={{ color: likeBtnColors[post.id] === 'blue' ? 'blue' : 'black' }}
                             onClick={() => handleLikeBtnClick(post.id)}>
                             like
@@ -164,6 +187,10 @@ const POSTSLIST = () => {
                     </div>
                 </div>
             ))}
+
+            <div className="share-post">
+                
+            </div>
         </div>
 
     );

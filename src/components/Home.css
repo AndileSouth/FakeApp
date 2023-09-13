@@ -27,6 +27,7 @@
     min-height: 150px;
     overflow: auto;
     
+    
 }
 
 .user {
@@ -61,17 +62,24 @@
     margin-top: 70px;
 }
 
-.user-opt {
+.user-opt-btn {
     position: absolute;
     top: 2px;
     right: 10px;
     z-index: 5;
 }
 
-/* .post-content {
-    margin-top: 20px;
-    margin-bottom: 15px;
-} */
+.user-opt {
+    display: none;
+    text-decoration: none;
+    list-style: none;
+    padding: 3px;
+    background-color: var(--Home-background-color);
+    position: absolute;
+    top: 25px;
+    right: 6px;
+    z-index: 5;
+}
 
 .refresh-btn {
     text-align: center;
@@ -80,3 +88,12 @@
 .like-btn {
     background-color: white;
 }
+
+/* .share-post {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.801);
+    z-index: 999;
+} */
