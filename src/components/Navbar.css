@@ -1,22 +1,167 @@
-.navbar-content {
-    margin:10px 0;
-    height: 60px;
+.NAVBAR {
+    height: 57px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.navBarContents {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 25px;
+}
+
+.navBox {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    align-items: center;
+    
+}
+
+.navBox .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.YouTube {
+    margin-right: 4px;
+}
+
+.searchBar {
+    height: 40px;
+    border-radius: 20px;
+    border: solid rgb(199, 196, 196) 1px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.432);
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 20px;
+    flex: 1;
+    flex-basis: 1e-9px;
+}
+
+.searchBar svg {
+    padding: 0 10px;
+    height: 18px;
+    
+}
+
+
+.navBox .searchIcon {
+    height: 40px;
+    border-left: solid rgb(199, 196, 196) 1px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.brand {
-    text-align: center;
+.voiceRecorder {
+    justify-content: center;
+    align-items: center;
 }
 
-.navbar-content nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+.searchBar input {
+    
+    background-color: white;
+    border: none;
+    margin-right: 7px;
+    font-size: medium;
+    width: 30vw;
+    
 }
 
-.navbar-content Link,.navbar-content a {
-    text-decoration: none;
-    color: black;
+.searchBar input:focus {
+        outline: none;
+}
+
+.pp {
+    background-color: var(--Pp-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+
+@media screen and (max-width:576px) {
+
+    .menuBtn {
+        display: none;
+        
+    }
+
+    .logo {
+        margin-left: -10px;
+    }
+
+    .searchBar {
+        display: none;
+    }
+    .searchIconMd {
+        display: block;
+    }
+
+    .voiceRecorder {
+        display: none;
+    }
+
+    .create {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:577px) {
+    .searchBar {
+        display: none;
+    }
+    
+    .searchIconMd {
+        display: block;
+    }
+
+    .voiceRecorder {
+        display: none;
+    }
+
+    .create {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .searchBar {
+        display: flex;
+    }
+
+    .searchBar input {
+    
+        background-color: white;
+        border: none;
+        margin-right: 7px;
+        font-size: medium;
+        width: 38vw;
+        
+    }
+
+    .searchIconMd {
+        display: none;
+        
+    }
+
+    .voiceRecorder {
+        display: none;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .voiceRecorder {
+        display: block;
+    }
 }

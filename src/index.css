@@ -11,3 +11,27 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --Primary-background-color: white;
+  --Primary-text-color: black;
+  --Pp-color: rgb(68, 5, 68);
+}
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.cursor:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
